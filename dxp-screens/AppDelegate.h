@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@import LiferayScreens;
+#import "LoginScreenViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic)        UIWindow                   *window;
 
 
 @end

@@ -1,0 +1,1 @@
+../../../LiferayScreens/ios/Framework/Core/Services/LRScreensjournalarticleService_v62.h
