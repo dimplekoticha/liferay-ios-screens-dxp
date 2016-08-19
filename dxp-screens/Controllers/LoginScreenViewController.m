@@ -33,8 +33,9 @@
 
 - (void)screenlet:(BaseScreenlet * __nonnull)screenlet onLoginError:(NSError * __nonnull)error {
     
-    NSLog(@"Login Error: %@", error);
     [self viewDidLoad];
+    NSLog(@"Login Error: %@", error);
+ 
 }
 
 

@@ -96,6 +96,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-dxp-screens/MDRadialProgress.framework"
   install_framework "Pods-dxp-screens/ODRefreshControl.framework"
   install_framework "Pods-dxp-screens/SMXMLDocument.framework"
+  install_framework "Pods-dxp-screens/SWRevealViewController.framework"
   install_framework "Pods-dxp-screens/TNRadioButtonGroup.framework"
   install_framework "Pods-dxp-screens/YapDatabase.framework"
 fi
@@ -112,6 +113,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-dxp-screens/MDRadialProgress.framework"
   install_framework "Pods-dxp-screens/ODRefreshControl.framework"
   install_framework "Pods-dxp-screens/SMXMLDocument.framework"
+  install_framework "Pods-dxp-screens/SWRevealViewController.framework"
   install_framework "Pods-dxp-screens/TNRadioButtonGroup.framework"
   install_framework "Pods-dxp-screens/YapDatabase.framework"
 fi

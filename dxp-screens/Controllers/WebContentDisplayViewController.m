@@ -18,18 +18,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [_screenlet loadWebContent];
+    
+    //Set the screenlets delegate - The viewcontroller is the delegate.
     self.screenlet.delegate = self;
-
+    
+    _barButton.target = self.revealViewController;
+    _barButton.action = @selector(revealToggle:);
+    
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
     // Do any additional setup after loading the view.
 }
 
 - (NSString * __nullable)screenlet:(WebContentDisplayScreenlet * __nonnull)screenlet onWebContentResponse:(NSString * __nonnull)html {
     
+    NSLog(@"onWebContentResponse");
     return(@"");
     
 }
 
 - (void)screenlet:(WebContentDisplayScreenlet * __nonnull)screenlet onWebContentError:(NSError * __nonnull)error {
+    
+    NSLog(@"Webcontent Loading Error: %@", error);
     
 }
 

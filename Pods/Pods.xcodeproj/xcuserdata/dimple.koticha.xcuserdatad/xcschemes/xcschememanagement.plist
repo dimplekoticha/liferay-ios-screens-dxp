@@ -84,6 +84,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SWRevealViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>TNRadioButtonGroup.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -97,6 +102,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1166F098B8AC6570E4F5F86652535D12</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1F290B3E911791D4F17C1051FCE2AC92</key>
 		<dict>
 			<key>primary</key>
@@ -118,11 +128,6 @@
 			<true/>
 		</dict>
 		<key>4878C70B21CA37D7CB8A476BF986741B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5A35776438142AD021C75F2B7FF52393</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -183,6 +188,11 @@
 			<true/>
 		</dict>
 		<key>F2C89BE07333A140787DED554D1C5A79</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F71FA74CC5BE80715425124AE2826C6E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

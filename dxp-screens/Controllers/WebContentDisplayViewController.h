@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 @import LiferayScreens;
+@import SWRevealViewController;
 
 @interface WebContentDisplayViewController : UIViewController <WebContentDisplayScreenletDelegate>
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *barButton;
 
 @end

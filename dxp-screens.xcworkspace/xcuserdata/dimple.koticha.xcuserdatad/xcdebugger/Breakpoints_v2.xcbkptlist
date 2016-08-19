@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "dxp-screens/Controllers/LoginScreenViewController.m"
-            timestampString = "478719770.224222"
+            timestampString = "493318296.013839"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "-screenlet:onLoginError:"
             landmarkType = "5">
          </BreakpointContent>
