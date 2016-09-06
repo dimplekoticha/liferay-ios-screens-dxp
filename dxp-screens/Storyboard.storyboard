@@ -138,7 +138,7 @@
                                             <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -158,7 +158,7 @@
                                             <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -178,7 +178,7 @@
                                             <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -198,7 +198,7 @@
                                             <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -216,7 +216,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kIP-Wn-dbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2183" y="-2076"/>
+            <point key="canvasLocation" x="-2267" y="-1636"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="916-HK-jVz">
@@ -232,7 +232,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oY2-63-2II" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2183" y="-1159"/>
+            <point key="canvasLocation" x="-2251" y="-659"/>
         </scene>
         <!--Web Content Display View Controller-->
         <scene sceneID="1EK-a2-vuI">
@@ -267,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvF-Cs-yzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1416" y="-1159"/>
+            <point key="canvasLocation" x="-1172" y="-1167"/>
         </scene>
         <!--Web Content Display View Controller-->
         <scene sceneID="mdv-oR-uf2">
@@ -281,7 +281,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AXe-wK-NKq" customClass="WebContentDisplayScreenlet" customModule="LiferayScreens">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AXe-wK-NKq" customClass="WebContentDisplayScreenlet" customModule="LiferayScreens">
                                 <rect key="frame" x="195" y="144" width="211" height="283"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
@@ -301,7 +301,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pA6-2e-wfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1216" y="-3377"/>
+            <point key="canvasLocation" x="-1172" y="-3217"/>
         </scene>
         <!--Web Content Display View Controller-->
         <scene sceneID="6jU-PI-fU5">
@@ -335,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pyR-im-3XV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1216" y="-2707"/>
+            <point key="canvasLocation" x="-1172" y="-2547"/>
         </scene>
         <!--Web Content Display View Controller-->
         <scene sceneID="owx-aN-kAy">
@@ -369,14 +369,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWm-sN-tqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1216" y="-2026"/>
+            <point key="canvasLocation" x="-1172" y="-1846"/>
         </scene>
     </scenes>
     <resources>
         <image name="liferay_logo" width="114" height="114"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="pvC-Ra-uoH"/>
         <segue reference="muL-kD-sEf"/>
-        <segue reference="qmR-Uh-7s6"/>
     </inferredMetricsTieBreakers>
 </document>

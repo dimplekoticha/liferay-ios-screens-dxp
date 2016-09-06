@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5E75A29F4EB12BADB0189908 /* Pods_dxp_screens.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4335AE4ECFEC7BDE199CE5A5 /* Pods_dxp_screens.framework */; };
-		A70678D01C8D2A9200E55ED8 /* FrontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70678CF1C8D2A9200E55ED8 /* FrontViewController.m */; };
 		A70EBF831C63C3D300556B61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A70EBF821C63C3D300556B61 /* main.m */; };
 		A70EBF861C63C3D300556B61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A70EBF851C63C3D300556B61 /* AppDelegate.m */; };
 		A70EBF911C63C3D300556B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70EBF901C63C3D300556B61 /* Assets.xcassets */; };
@@ -23,8 +22,6 @@
 /* Begin PBXFileReference section */
 		4335AE4ECFEC7BDE199CE5A5 /* Pods_dxp_screens.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dxp_screens.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56327AAEDECEEDB1A500A4EE /* Pods-dxp-screens.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dxp-screens.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dxp-screens/Pods-dxp-screens.debug.xcconfig"; sourceTree = "<group>"; };
-		A70678CE1C8D2A9200E55ED8 /* FrontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FrontViewController.h; path = Controllers/FrontViewController.h; sourceTree = "<group>"; };
-		A70678CF1C8D2A9200E55ED8 /* FrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FrontViewController.m; path = Controllers/FrontViewController.m; sourceTree = "<group>"; };
 		A70EBF7E1C63C3D300556B61 /* dxp-screens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dxp-screens.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70EBF821C63C3D300556B61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A70EBF841C63C3D300556B61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -131,8 +128,6 @@
 				A718888D1C64410E00A172B7 /* LoginScreenViewController.m */,
 				A71888B81C652BC100A172B7 /* SignUpScreenViewController.h */,
 				A71888B91C652BC100A172B7 /* SignUpScreenViewController.m */,
-				A70678CE1C8D2A9200E55ED8 /* FrontViewController.h */,
-				A70678CF1C8D2A9200E55ED8 /* FrontViewController.m */,
 				A771BB411D662A50007DC0F5 /* MainMenuTableViewController.h */,
 				A771BB421D662A50007DC0F5 /* MainMenuTableViewController.m */,
 			);
@@ -260,7 +255,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A70678D01C8D2A9200E55ED8 /* FrontViewController.m in Sources */,
 				A71888BA1C652BC100A172B7 /* SignUpScreenViewController.m in Sources */,
 				A70EBF861C63C3D300556B61 /* AppDelegate.m in Sources */,
 				A71888BD1C654A6200A172B7 /* WebContentDisplayViewController.m in Sources */,

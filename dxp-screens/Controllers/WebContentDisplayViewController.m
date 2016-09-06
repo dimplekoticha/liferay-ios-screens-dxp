@@ -18,15 +18,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [_screenlet loadWebContent];
     
     //Set the screenlets delegate - The viewcontroller is the delegate.
     self.screenlet.delegate = self;
+   
     
     _barButton.target = self.revealViewController;
     _barButton.action = @selector(revealToggle:);
     
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+     [self.screenlet loadWebContent];
     
     // Do any additional setup after loading the view.
 }
