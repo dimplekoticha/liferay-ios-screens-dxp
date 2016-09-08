@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @import LiferayScreens;
+#import "LiferayScreens-Swift.h"
 
 @interface LoginScreenViewController : UIViewController <LoginScreenletDelegate>
 

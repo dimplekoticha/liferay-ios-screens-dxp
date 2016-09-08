@@ -18,7 +18,7 @@ import MobileCoreServices
 private let xibName = "DDLFieldDocumentlibraryPresenterViewController_default"
 
 
-public class DDLFieldDocumentlibraryPresenterViewController_default:
+public class DDMFieldDocumentlibraryPresenterViewController_default:
 		UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
 	@IBOutlet public var takeNewButton: UIButton?
@@ -38,15 +38,12 @@ public class DDLFieldDocumentlibraryPresenterViewController_default:
 	public convenience init() {
 		func bundleForXib() -> NSBundle? {
 			let bundles = NSBundle.allBundles(
-					DDLFieldDocumentlibraryPresenterViewController_default.self);
+					DDMFieldDocumentlibraryPresenterViewController_default.self);
 
-			for bundle in bundles {
-				if bundle.pathForResource(xibName, ofType:"nib") != nil {
-					return bundle
+			return bundles.filter {
+					$0.pathForResource(xibName, ofType:"nib") != nil
 				}
-			}
-
-			return nil
+				.first
 		}
 
 		self.init(
@@ -83,23 +80,18 @@ public class DDLFieldDocumentlibraryPresenterViewController_default:
 	}
 
 	@IBAction private func takePhotoAction(sender: AnyObject) {
-		cancelButtonAction(sender)
-
 		imagePicker.sourceType = .Camera
 
 		presentViewController(imagePicker, animated: true) {}
 	}
 
 	@IBAction private func selectPhotosAction(sender: AnyObject) {
-		cancelButtonAction(sender)
-
 		imagePicker.sourceType = .SavedPhotosAlbum
 
 		presentViewController(imagePicker, animated: true) {}
 	}
 
 	@IBAction private func selectVideosAction(sender: AnyObject) {
-		cancelButtonAction(sender)
 
 		imagePicker.sourceType = .SavedPhotosAlbum
 		imagePicker.mediaTypes = [kUTTypeMovie as NSString as String]
@@ -123,6 +115,7 @@ public class DDLFieldDocumentlibraryPresenterViewController_default:
 	}
 
     public func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+		cancelButtonAction(picker)
 		imagePicker.dismissViewControllerAnimated(true) {}
 	}
 

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D86052C1F3176C5248925456'
+               BlueprintIdentifier = 'D1FBB4C1169F5D2A4429EAA5'
                BlueprintName = 'Pods-dxp-screens'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_dxp_screens.framework'>

@@ -1,1 +1,1 @@
-../../../LiferayScreens/ios/Framework/Core/Services/LRScreensuserService_v62.h
+../../../LiferayScreens/ios/Framework/Core/Services/v62/LRScreensuserService_v62.h

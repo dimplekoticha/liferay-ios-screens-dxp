@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LiferayScreens-Swift.h"
 @import LiferayScreens;
 
 @interface SignUpScreenViewController : UIViewController <SignUpScreenletDelegate>

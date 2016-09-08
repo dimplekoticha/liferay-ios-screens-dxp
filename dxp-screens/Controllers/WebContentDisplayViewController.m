@@ -28,16 +28,22 @@
     
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
-     [self.screenlet loadWebContent];
+    //[SessionContext loginWithBasicWithUsername:@"bruno" password:@"test" userAttributes:[NSDictionary dictionary]];
+  
+    [self.screenlet loadWebContent];
     
     // Do any additional setup after loading the view.
 }
 
-- (NSString * __nullable)screenlet:(WebContentDisplayScreenlet * __nonnull)screenlet onWebContentResponse:(NSString * __nonnull)html {
+- (void)screenlet:(WebContentDisplayScreenlet * _Nonnull)screenlet onRecordContentResponse:(DDLRecord * _Nonnull)record
+{
     
-    NSLog(@"onWebContentResponse");
-    return(@"");
-    
+}
+
+- (NSString * _Nullable)screenlet:(WebContentDisplayScreenlet * _Nonnull)screenlet onWebContentResponse:(NSString * _Nonnull)html
+{
+    NSLog(@"html-> %@", html);
+    return html;
 }
 
 - (void)screenlet:(WebContentDisplayScreenlet * __nonnull)screenlet onWebContentError:(NSError * __nonnull)error {

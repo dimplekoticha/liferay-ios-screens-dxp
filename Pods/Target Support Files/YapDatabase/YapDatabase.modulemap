@@ -1,42 +1,130 @@
 framework module YapDatabase {
-  umbrella header "YapDatabase-umbrella.h"
-
-  export *
-  module * { export * }
-
-  private header "YapDatabaseCloudKitPrivate.h"
-  private header "YDBCKAttachRequest.h"
-  private header "YDBCKChangeQueue.h"
-  private header "YDBCKChangeRecord.h"
-  private header "YDBCKMappingTableInfo.h"
-  private header "YDBCKRecordTableInfo.h"
-  private header "YapDatabaseFilteredViewPrivate.h"
-  private header "YapDatabaseFullTextSearchPrivate.h"
-  private header "YapDatabaseHooksPrivate.h"
-  private header "YapDatabaseExtensionPrivate.h"
-  private header "YapDatabaseRelationshipEdgePrivate.h"
-  private header "YapDatabaseRelationshipPrivate.h"
-  private header "YapDatabaseRTreeIndexPrivate.h"
-  private header "YapDatabaseSearchResultsViewPrivate.h"
-  private header "YapDatabaseSecondaryIndexPrivate.h"
-  private header "YapDatabaseViewChangePrivate.h"
-  private header "YapDatabaseViewMappingsPrivate.h"
-  private header "YapDatabaseViewPage.h"
-  private header "YapDatabaseViewPageMetadata.h"
-  private header "YapDatabaseViewPrivate.h"
-  private header "YapDatabaseViewRangeOptionsPrivate.h"
-  private header "YapDatabaseViewState.h"
-  private header "NSDictionary+YapDatabase.h"
-  private header "YapDatabaseConnectionDefaults.h"
-  private header "YapDatabaseConnectionState.h"
-  private header "YapDatabaseLogging.h"
-  private header "YapDatabaseManager.h"
-  private header "YapDatabasePrivate.h"
-  private header "YapDatabaseStatement.h"
-  private header "YapDatabaseString.h"
-  private header "YapDebugDictionary.h"
-  private header "YapMemoryTable.h"
-  private header "YapNull.h"
-  private header "YapRowidSet.h"
-  private header "YapTouch.h"
+	
+	header "YapDatabase.h"
+	header "YapDatabaseConnection.h"
+	header "YapDatabaseTransaction.h"
+	header "YapDatabaseOptions.h"
+	header "YapDatabaseExtension.h"
+	header "YapDatabaseExtensionConnection.h"
+	header "YapDatabaseExtensionTransaction.h"
+	header "YapDatabaseExtensionTypes.h"
+	
+	module Utilities {
+		header "YapCache.h"
+		header "YapCollectionKey.h"
+		header "YapDatabaseQuery.h"
+		header "YapMurmurHash.h"
+		header "YapProxyObject.h"
+		header "YapSet.h"
+		header "YapWhitelistBlacklist.h"
+		header "YapMutationStack.h"
+	}
+	
+	// Extension: View
+	
+	explicit module YapDatabaseView {
+		header "YapDatabaseView.h"
+		header "YapDatabaseViewTypes.h"
+		header "YapDatabaseViewOptions.h"
+		header "YapDatabaseViewConnection.h"
+		header "YapDatabaseViewTransaction.h"
+		header "YapDatabaseViewMappings.h"
+		header "YapDatabaseViewChange.h"
+		header "YapDatabaseViewRangeOptions.h"
+	}
+	
+	// Extension: FilteredView
+	
+	explicit module YapDatabaseFilteredView {
+		header "YapDatabaseFilteredView.h"
+		header "YapDatabaseFilteredViewTypes.h"
+		header "YapDatabaseFilteredViewConnection.h"
+		header "YapDatabaseFilteredViewTransaction.h"
+		
+		export YapDatabaseView
+	}
+	
+	// Extension: Relationship
+	
+	explicit module YapDatabaseRelationship {
+		header "YapDatabaseRelationship.h"
+		header "YapDatabaseRelationshipNode.h"
+		header "YapDatabaseRelationshipEdge.h"
+		header "YapDatabaseRelationshipOptions.h"
+		header "YapDatabaseRelationshipConnection.h"
+		header "YapDatabaseRelationshipTransaction.h"
+	}
+	
+	// Extension: SecondaryIndex
+	
+	explicit module YapDatabaseSecondaryIndex {
+		header "YapDatabaseSecondaryIndex.h"
+		header "YapDatabaseSecondaryIndexSetup.h"
+		header "YapDatabaseSecondaryIndexHandler.h"
+		header "YapDatabaseSecondaryIndexOptions.h"
+		header "YapDatabaseSecondaryIndexConnection.h"
+		header "YapDatabaseSecondaryIndexTransaction.h"
+	}
+	
+	// Extension: FullTextSearch
+	
+	explicit module YapDatabaseFullTextSearch {
+		header "YapDatabaseFullTextSearch.h"
+		header "YapDatabaseFullTextSearchHandler.h"
+		header "YapDatabaseFullTextSearchConnection.h"
+		header "YapDatabaseFullTextSearchTransaction.h"
+		header "YapDatabaseFullTextSearchSnippetOptions.h"
+	}
+	
+	// Extension: SearchResultsView
+	
+	explicit module YapDatabaseSearchResultsView {
+		header "YapDatabaseSearchResultsView.h"
+		header "YapDatabaseSearchResultsViewOptions.h"
+		header "YapDatabaseSearchResultsViewConnection.h"
+		header "YapDatabaseSearchResultsViewTransaction.h"
+		header "YapDatabaseSearchQueue.h"
+		
+		export YapDatabaseView
+		export YapDatabaseFullTextSearch
+	}
+	
+	// Extension: Hooks
+	
+	explicit module YapDatabaseHooks {
+		header "YapDatabaseHooks.h"
+		header "YapDatabaseHooksConnection.h"
+		header "YapDatabaseHooksTransaction.h"
+	}
+	
+	// Extension: CloudKit
+	
+	explicit module YapDatabaseCloudKit {
+		header "YapDatabaseCloudKit.h"
+		header "YapDatabaseCloudKitTypes.h"
+		header "YapDatabaseCloudKitOptions.h"
+		header "YapDatabaseCloudKitConnection.h"
+		header "YapDatabaseCloudKitTransaction.h"
+		header "YDBCKChangeSet.h"
+		header "YDBCKMergeInfo.h"
+		header "YDBCKRecordInfo.h"
+		header "YDBCKRecord.h"
+	}
+	
+	// Extension: RTree
+	
+	explicit module YapDatabaseRTreeIndex {
+		header "YapDatabaseRTreeIndex.h"
+		header "YapDatabaseRTreeIndexSetup.h"
+		header "YapDatabaseRTreeIndexHandler.h"
+		header "YapDatabaseRTreeIndexOptions.h"
+		header "YapDatabaseRTreeIndexConnection.h"
+		header "YapDatabaseRTreeIndexTransaction.h"
+	}
+	
+	// Extension: ConnectionProxy
+	
+	explicit module YapDatabaseConnectionProxy {
+		header "YapDatabaseConnectionProxy.h"
+	}
 }

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'DFC4948955D48431D755E326'
+               BlueprintIdentifier = '3EA58BD710F805668D92DFB2'
                BlueprintName = 'SMXMLDocument'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SMXMLDocument.framework'>

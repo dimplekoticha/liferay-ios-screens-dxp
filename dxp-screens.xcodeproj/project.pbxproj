@@ -168,6 +168,12 @@
 				TargetAttributes = {
 					A70EBF7D1C63C3D300556B61 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 7H3SPU5TB9;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -356,7 +362,7 @@
 				INFOPLIST_FILE = "dxp-screens/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.liferay.dxp-screens";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liferay.dxp.fsi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -370,7 +376,7 @@
 				INFOPLIST_FILE = "dxp-screens/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.liferay.dxp-screens";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liferay.dxp.fsi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

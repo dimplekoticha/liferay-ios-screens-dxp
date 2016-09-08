@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '665A85D4DE26857BD57DC036'
+               BlueprintIdentifier = 'EC9C76F43EFD8B68C17A3CB9'
                BlueprintName = 'LiferayScreens-LiferayScreens-default'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'LiferayScreens-default.bundle'>

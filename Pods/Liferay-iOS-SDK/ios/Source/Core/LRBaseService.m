@@ -15,7 +15,8 @@
 #import "LRBaseService.h"
 #import "LRValidator.h"
 
-NSString *const _SERVICE_CONTEXT = @"com.liferay.portal.service.ServiceContext";
+NSString *const _SERVICE_CONTEXT_62 = @"com.liferay.portal.service.ServiceContext";
+NSString *const _SERVICE_CONTEXT_70 = @"com.liferay.portal.kernel.service.ServiceContext";
 
 /**
  * @author Bruno Farache
@@ -49,7 +50,9 @@ NSString *const _SERVICE_CONTEXT = @"com.liferay.portal.service.ServiceContext";
 		wrapper:(LRJSONObjectWrapper *)wrapper {
 
 	if (!wrapper) {
-		if (![className isEqualToString:_SERVICE_CONTEXT]) {
+		if (![className isEqualToString:_SERVICE_CONTEXT_62] &&
+			![className isEqualToString:_SERVICE_CONTEXT_70]) {
+
 			[params setObject:[NSNull null] forKey:name];
 		}
 
