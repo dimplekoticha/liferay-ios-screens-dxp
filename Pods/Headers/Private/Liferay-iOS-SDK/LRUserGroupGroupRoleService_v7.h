@@ -1,0 +1,1 @@
+../../../Liferay-iOS-SDK/ios/Source/Service/v7/usergroupgrouprole/LRUserGroupGroupRoleService_v7.h

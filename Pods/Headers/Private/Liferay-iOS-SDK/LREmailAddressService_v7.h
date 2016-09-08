@@ -1,0 +1,1 @@
+../../../Liferay-iOS-SDK/ios/Source/Service/v7/emailaddress/LREmailAddressService_v7.h

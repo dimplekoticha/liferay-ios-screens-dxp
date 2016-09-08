@@ -1,0 +1,1 @@
+../../../LiferayScreens/ios/Framework/Core/Services/v70/LRScreensddlrecordService_v70.h

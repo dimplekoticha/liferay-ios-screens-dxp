@@ -1,0 +1,1 @@
+../../../Liferay-iOS-SDK/ios/Source/Service/v7/shoppingorder/LRShoppingOrderService_v7.h

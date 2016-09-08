@@ -1,0 +1,1 @@
+../../../Liferay-iOS-SDK/ios/Source/Service/v7/ratingsentry/LRRatingsEntryService_v7.h

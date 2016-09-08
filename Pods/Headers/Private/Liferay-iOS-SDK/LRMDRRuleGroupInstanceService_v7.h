@@ -1,0 +1,1 @@
+../../../Liferay-iOS-SDK/ios/Source/Service/v7/mdrrulegroupinstance/LRMDRRuleGroupInstanceService_v7.h

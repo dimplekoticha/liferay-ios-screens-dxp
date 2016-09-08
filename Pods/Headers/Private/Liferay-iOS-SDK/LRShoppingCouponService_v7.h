@@ -1,0 +1,1 @@
+../../../Liferay-iOS-SDK/ios/Source/Service/v7/shoppingcoupon/LRShoppingCouponService_v7.h
