@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6C7B3C52D2319CA8A39A3ACC'
+               BlueprintIdentifier = '19D1C991DD06C8DB9760BCE8'
                BlueprintName = 'DTPickerPresenter'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'DTPickerPresenter.framework'>

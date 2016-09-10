@@ -103,7 +103,7 @@ typedef void (^LRHandler)(
 	NSData *body = [NSJSONSerialization dataWithJSONObject:commands options:0
 		error:error];
 
-	if (body == nil) {
+	if (*error) {
 		return nil;
 	}
 

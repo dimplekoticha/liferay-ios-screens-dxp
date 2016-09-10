@@ -17,7 +17,6 @@
 #import "LRBatchSession.h"
 #import "LRError.h"
 
-const int LR_HTTP_STATUS_INTERNAL_ERROR = 500;
 const int LR_HTTP_STATUS_MOVED_PERMANENTLY = 301;
 const int LR_HTTP_STATUS_MOVED_TEMPORARILY = 302;
 const int LR_HTTP_STATUS_OK = 200;
@@ -82,9 +81,7 @@ const int LR_HTTP_STATUS_UNAUTHORIZED = 401;
 		error = [LRError errorWithCode:LRErrorCodeRedirect
 			description:@"url-has-moved" userInfo:userInfo];
 	}
-	else if (statusCode != LR_HTTP_STATUS_OK &&
-			statusCode != LR_HTTP_STATUS_INTERNAL_ERROR) {
-
+	else if (statusCode != LR_HTTP_STATUS_OK) {
 		error = [LRError errorWithCode:statusCode description:@"http-error"];
 	}
 
@@ -97,29 +94,29 @@ const int LR_HTTP_STATUS_UNAUTHORIZED = 401;
 		return nil;
 	}
 
-	NSString *message = [json objectForKey:@"exception"];
+	NSString *exception = [json objectForKey:@"exception"];
 
-	if (!message) {
+	if (!exception) {
 		return nil;
 	}
 
-	NSString *detail = [json objectForKey:@"message"];
-	NSDictionary *errorValue = [json objectForKey:@"error"];
+	NSString *type = [json objectForKey:@"type"];
+	NSError *error;
 
-	if (errorValue) {
-		message = [json objectForKey:@"type"];
+	if (type) {
+		NSDictionary *userInfo = @{
+			NSLocalizedFailureReasonErrorKey: exception
+		};
+
+		error = [LRError errorWithCode:LRErrorCodePortalException
+			description:type userInfo:userInfo];
+	}
+	else {
+		error = [LRError errorWithCode:LRErrorCodePortalException
+			description:exception];
 	}
 
-	if (!message) {
-		message = [json objectForKey:@"exception"];
-	}
-
-	NSDictionary *userInfo = @{
-		NSLocalizedFailureReasonErrorKey: message
-	};
-
-	return [LRError errorWithCode:LRErrorCodePortalException
-		description:detail userInfo:userInfo];
+	return error;
 }
 
 + (BOOL)_isRedirect:(long)statusCode {

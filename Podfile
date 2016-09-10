@@ -11,6 +11,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 pod 'LiferayScreens'
+pod 'Liferay-Push'
 pod 'SWRevealViewController', '~> 2.3'
 
 end

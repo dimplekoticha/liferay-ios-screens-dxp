@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Liferay-Push.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Liferay-iOS-SDK-Liferay-iOS-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -107,32 +112,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>13FDF8ED9A227E00A9610212A25A7C33</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1F011D6FCB028D8939AC153BA9C76692</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>28EEF41E996464120686F8F1F0ED598A</key>
+		<key>26ED6398A8255D9C9EA38C06A5455E32</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2921FF7DFFAFC041A71E80135EB38392</key>
+		<key>3E6E2DC274AA9630EE3F6CB6FE70624B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>29C49D4C8BEF08C535A241E79DC3B664</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3D1D0A1C259FCA6ED80C0E89513CB64A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3FF2877B5985DE430EB24DB2063B377C</key>
+		<key>46D2E54A6EB71518C88A5AA1C05A8C18</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -142,7 +142,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7270B450CDFAE401D0B36C3C4C3011AB</key>
+		<key>4D599DAA55FFCA9420F62A64B8DC7D02</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5F4E81C5BF8B6DD6FC526CBB502609C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -167,17 +172,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9BBDDAD75DF13D4D38F41912B954B26C</key>
+		<key>9981333C1A16D4BCDB2CEEEDE6D7607A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B70C973AA4B886152E8EBE965494F72F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BC6B2470FE8664715F00727C19802A70</key>
+		<key>9ECADD122139C8F3B3B213C8FB09C444</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -187,12 +187,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C0D90AE67E04AA422DA81AB978B1E229</key>
+		<key>C16DBA450E8B0BD938A6738A57B059C3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D73743ED759905916DDB50A89695F2C8</key>
+		<key>C6317CA3E3E3812D18F72E94FF42EF59</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF6754DF0FF1BE8AC1108AC57EB2239A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -202,7 +207,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F6AF45B73139C8082C072A55FF937D2C</key>
+		<key>D95B4FB90F045BAC868861A40767FB2E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E5FBB9C97D05F47514120A6F227D6072</key>
 		<dict>
 			<key>primary</key>
 			<true/>

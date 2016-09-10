@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@import LiferayScreens;
-#import "LoginScreenViewController.h"
+@import LRPush;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
