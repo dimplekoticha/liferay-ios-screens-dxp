@@ -1,0 +1,6 @@
+framework module LRPush {
+  umbrella header "Liferay-Push-umbrella.h"
+
+  export *
+  module * { export * }
+}
