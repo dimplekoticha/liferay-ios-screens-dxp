@@ -77,10 +77,11 @@
             NSLog(@"Completion with result: %@", resultAsString);
 
             //Build scanner on QR code string
-            NSScanner *scan = [NSScanner scannerWithString:resultAsString];
+            NSScanner *scanresultAsString = [NSScanner scannerWithString:resultAsString];
             
             NSCharacterSet *newLine = [NSCharacterSet characterSetWithCharactersInString:@"\n"];
             NSCharacterSet *colon = [NSCharacterSet characterSetWithCharactersInString:@":"];
+            NSCharacterSet *bracket = [NSCharacterSet characterSetWithCharactersInString:@"("];
             
             //Define parsing tokens. These are the items that will be used to sign up each user
             NSArray *keyArray = @[@"FN", @"EMAIL", @"ORG", @"TITLE"];
@@ -88,33 +89,63 @@
            
             NSString *result;
             
-            while ([scan scanUpToCharactersFromSet: newLine intoString:&result]) {
+            while ([scanresultAsString scanUpToCharactersFromSet:newLine intoString:&result]) {
                 
                 //if scanned token is FN, EMAIL, ORG, TITLE, parse further for value otherwise keep going
                 
-                NSScanner *secondScan = [NSScanner scannerWithString:result];
+                NSScanner *scanSecondary = [NSScanner scannerWithString:result];
                 NSString *secondResult, *value;
                 
-                if ([secondScan scanUpToCharactersFromSet:colon intoString:&secondResult]) {
+                if ([scanSecondary scanUpToCharactersFromSet:colon intoString:&secondResult]) {
                     NSLog(secondResult);
                     
                     if ([keyArray containsObject:secondResult]) {
                         
-                        if ([secondScan scanUpToCharactersFromSet:newLine intoString:&value]){
+                        if ([scanSecondary scanUpToCharactersFromSet:newLine intoString:&value]){
                             NSLog(value);
                             
                             //Determine which key is the value associated with
                             [valueArray addObject:value];
-                            
                         }
                         
                     }
                     
                 }
-                
-                
-                
+    
             }
+            
+            //Make service call
+            
+            //Create session
+            LRSession *session = [[LRSession alloc] initWithServer:@"https://cloud-10-0-20-48.liferay.com/"
+                                                    authentication:[[LRBasicAuthentication alloc] initWithUsername:@"bruno" password:@"test"]];
+            
+            LRUserService_v7 *service = [[LRUserService_v7 alloc] initWithSession:session];
+            NSError *error;
+            
+            long long companyid = 20116;
+            long long facebookId = 0;
+            
+            //Trim off colon at the first position of the string
+            NSString *name = [[valueArray objectAtIndex:0] stringByTrimmingCharactersInSet:colon];
+            NSString *email = [[valueArray objectAtIndex:1] stringByTrimmingCharactersInSet:colon];
+            NSString *jobTitle = [[valueArray objectAtIndex:3] stringByTrimmingCharactersInSet:colon];
+            NSArray *blankArray = [[NSArray alloc]init];
+            NSString *fullName;
+           
+            NSScanner *scanAttendeeName = [NSScanner scannerWithString:name];
+            if ([scanAttendeeName scanUpToCharactersFromSet:bracket intoString:&fullName]) {
+                
+                NSLog(fullName);
+                
+                [service addUserWithCompanyId:companyid autoPassword:true password1:@"test" password2:@"test" autoScreenName:true screenName:@"Dimple" emailAddress:email facebookId:0 openId:@"" locale:@"" firstName:fullName middleName:@"" lastName:@"Koticha" prefixId:0 suffixId:0 male:true birthdayMonth:1 birthdayDay:1 birthdayYear:1970 jobTitle:jobTitle groupIds:blankArray organizationIds:blankArray roleIds:blankArray userGroupIds:blankArray addresses:blankArray emailAddresses:blankArray phones:blankArray websites:blankArray announcementsDelivers:blankArray sendEmail:true serviceContext:nil error:&error];
+
+            }
+            
+            
+            NSLog(@"Completed");
+
+            
             
         }];
         
@@ -126,22 +157,6 @@
         [alert show];
     }
     
-    
-    //Create session
-    LRSession *session = [[LRSession alloc] initWithServer:@"https://cloud-10-0-20-48.liferay.com/"
-                                            authentication:[[LRBasicAuthentication alloc] initWithUsername:@"bruno" password:@"test"]];
-    
-    LRUserService_v7 *service = [[LRUserService_v7 alloc] initWithSession:session];
-    NSError *error;
-    
-    long long companyid = 20116;
-    long long facebookId = 0;
-    
-    NSArray *blankArray = [[NSArray alloc]init];
-
-    [service addUserWithCompanyId:companyid autoPassword:true password1:@"test" password2:@"test" autoScreenName:true screenName:@"Dimple" emailAddress:@"dimple@liferay.com" facebookId:0 openId:@"" locale:@"" firstName:@"Dimple" middleName:@"" lastName:@"Koticha" prefixId:0 suffixId:0 male:true birthdayMonth:1 birthdayDay:1 birthdayYear:1970 jobTitle:@"" groupIds:blankArray organizationIds:blankArray roleIds:blankArray userGroupIds:blankArray addresses:blankArray emailAddresses:blankArray phones:blankArray websites:blankArray announcementsDelivers:blankArray sendEmail:true serviceContext:nil error:&error];
-    
-    NSLog(@"Completed");
 }
 
 #pragma mark - QRCodeReader Delegate Methods
