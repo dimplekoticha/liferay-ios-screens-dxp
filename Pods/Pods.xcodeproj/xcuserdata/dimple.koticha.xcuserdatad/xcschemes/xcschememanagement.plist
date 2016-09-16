@@ -84,6 +84,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>QRCodeReaderViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SMXMLDocument.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -127,7 +132,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3E6E2DC274AA9630EE3F6CB6FE70624B</key>
+		<key>2FA0D4AAE983E8E4EAA80D3D61D456ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4533C8AD1B57CA6E98095A58159905CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -192,7 +202,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C6317CA3E3E3812D18F72E94FF42EF59</key>
+		<key>CB2BA1F61E0D4A1B48D319C392F53E64</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -13,6 +13,7 @@ use_frameworks!
 pod 'LiferayScreens'
 pod 'Liferay-Push'
 pod 'SWRevealViewController', '~> 2.3'
+pod 'QRCodeReaderViewController'
 
 end
 

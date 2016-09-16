@@ -10,12 +10,140 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "dxp-screens/Controllers/LoginScreenViewController.m"
-            timestampString = "493318296.013839"
+            timestampString = "495666320.211796"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "-screenlet:onLoginError:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dxp-screens/Controllers/QRCodeReadingViewController.m"
+            timestampString = "495581072.950486"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "@interface QRCodeReadingViewController()"
+            landmarkType = "2">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dxp-screens/Controllers/LoginScreenViewController.m"
+            timestampString = "495728983.24121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "-scanAction:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/Liferay-iOS-SDK/ios/Source/Service/v7/user/LRUserService_v7.m"
+            timestampString = "495663023.632769"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "-addUserWithCompanyId:autoPassword:password1:password2:autoScreenName:screenName:emailAddress:facebookId:openId:locale:firstName:middleName:lastName:prefixId:suffixId:male:birthdayMonth:birthdayDay:birthdayYear:jobTitle:groupIds:organizationIds:roleIds:userGroupIds:sendEmail:serviceContext:error:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/Liferay-iOS-SDK/ios/Source/Service/v62/user/LRUserService_v62.m"
+            timestampString = "495663452.995188"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "-addUserWithCompanyId:autoPassword:password1:password2:autoScreenName:screenName:emailAddress:facebookId:openId:locale:firstName:middleName:lastName:prefixId:suffixId:male:birthdayMonth:birthdayDay:birthdayYear:jobTitle:groupIds:organizationIds:roleIds:userGroupIds:sendEmail:serviceContext:error:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/Liferay-iOS-SDK/ios/Source/Service/v62/user/LRUserService_v62.m"
+            timestampString = "495663458.597925"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "-addUserWithCompanyId:autoPassword:password1:password2:autoScreenName:screenName:emailAddress:facebookId:openId:locale:firstName:middleName:lastName:prefixId:suffixId:male:birthdayMonth:birthdayDay:birthdayYear:jobTitle:groupIds:organizationIds:roleIds:userGroupIds:addresses:emailAddresses:phones:websites:announcementsDelivers:sendEmail:serviceContext:error:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/LiferayScreens/ios/Framework/Core/Auth/SignUpScreenlet/Connectors/SignUpLiferayConnector.swift"
+            timestampString = "495663568.46776"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "doRun(session:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/LiferayScreens/ios/Framework/Core/Auth/SignUpScreenlet/Connectors/SignUpLiferayConnector.swift"
+            timestampString = "495663610.407776"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "doRun(session:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dxp-screens/Controllers/LoginScreenViewController.m"
+            timestampString = "495728983.24121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "-scanAction:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 @import LiferayScreens;
+@import QRCodeReaderViewController;
 
-@interface LoginScreenViewController : UIViewController <LoginScreenletDelegate>
+@interface LoginScreenViewController : UIViewController <LoginScreenletDelegate, QRCodeReaderDelegate>
+
+- (IBAction)scanAction:(id)sender;
 
 @end

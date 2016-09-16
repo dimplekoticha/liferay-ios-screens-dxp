@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B16342E263AC131A60CC4BBA'
+               BlueprintIdentifier = 'C406A8101D8024FBFD4CB020'
                BlueprintName = 'Liferay-iOS-SDK-Liferay-iOS-SDK'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Liferay-iOS-SDK.bundle'>

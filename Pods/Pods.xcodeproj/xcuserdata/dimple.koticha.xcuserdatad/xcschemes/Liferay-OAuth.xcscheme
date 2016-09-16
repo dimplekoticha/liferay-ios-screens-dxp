@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '68B239FF06D3D0E6E7B1A361'
+               BlueprintIdentifier = '7797C937D2292E4346099942'
                BlueprintName = 'Liferay-OAuth'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'LROAuth.framework'>

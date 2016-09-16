@@ -23,19 +23,6 @@
     
     [self registerForPushNotifications:application];
     
-    [[UIApplication sharedApplication] cancelAllLocalNotifications];
-     UILocalNotification *notification = [[UILocalNotification alloc]init];
-    
-    // create a local notification
-    notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:30];
-    notification.timeZone = [NSTimeZone defaultTimeZone];
-    notification.repeatInterval = 0;
-    notification.soundName = UILocalNotificationDefaultSoundName;
-    notification.alertAction = @"Let's do this";
-    notification.alertBody = @"Please proceed to table 1.";
-    
-    [[UIApplication sharedApplication]presentLocalNotificationNow:notification];
-    
     return YES;
 }
 
@@ -96,9 +83,6 @@
                           ntohl(tokenBytes[3]), ntohl(tokenBytes[4]), ntohl(tokenBytes[5]),
                           ntohl(tokenBytes[6]), ntohl(tokenBytes[7])];
     NSLog(hexToken);
-    
-    
-    LRSession *session = [[LRSession alloc] initWithServer:@"http://cloud-10-0-20-48:8080" authentication:[[LRBasicAuthentication alloc] initWithUsername:@"bruno@liferay.com" password:@"test"]];
     
 }
 
