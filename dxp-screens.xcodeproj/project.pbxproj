@@ -11,6 +11,7 @@
 		A70EBF831C63C3D300556B61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A70EBF821C63C3D300556B61 /* main.m */; };
 		A70EBF861C63C3D300556B61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A70EBF851C63C3D300556B61 /* AppDelegate.m */; };
 		A70EBF911C63C3D300556B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70EBF901C63C3D300556B61 /* Assets.xcassets */; };
+		A710BF2C1D8C4B77006A89EE /* LoginView_fsi.xib in Resources */ = {isa = PBXBuildFile; fileRef = A710BF2B1D8C4B77006A89EE /* LoginView_fsi.xib */; };
 		A71888871C63C67E00A172B7 /* liferay-server-context.plist in Resources */ = {isa = PBXBuildFile; fileRef = A71888861C63C67E00A172B7 /* liferay-server-context.plist */; };
 		A718888E1C64410E00A172B7 /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A718888D1C64410E00A172B7 /* LoginScreenViewController.m */; };
 		A71888941C6506F400A172B7 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A71888931C6506F400A172B7 /* Storyboard.storyboard */; };
@@ -30,6 +31,7 @@
 		A70EBF851C63C3D300556B61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A70EBF901C63C3D300556B61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A70EBF951C63C3D300556B61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A710BF2B1D8C4B77006A89EE /* LoginView_fsi.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView_fsi.xib; sourceTree = "<group>"; };
 		A71888861C63C67E00A172B7 /* liferay-server-context.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "liferay-server-context.plist"; sourceTree = "<group>"; };
 		A718888C1C64410E00A172B7 /* LoginScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginScreenViewController.h; path = Controllers/LoginScreenViewController.h; sourceTree = "<group>"; };
 		A718888D1C64410E00A172B7 /* LoginScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginScreenViewController.m; path = Controllers/LoginScreenViewController.m; sourceTree = "<group>"; };
@@ -97,6 +99,8 @@
 		A70EBF801C63C3D300556B61 /* dxp-screens */ = {
 			isa = PBXGroup;
 			children = (
+				A710BF2B1D8C4B77006A89EE /* LoginView_fsi.xib */,
+				A7FEBB371D8C4113008BC945 /* Theme */,
 				A71888931C6506F400A172B7 /* Storyboard.storyboard */,
 				A71888891C643F0C00A172B7 /* Controllers */,
 				A71888881C643F0200A172B7 /* Views */,
@@ -142,6 +146,13 @@
 				A7A0B9C81D81E6490080D142 /* DDLFormsViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A7FEBB371D8C4113008BC945 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +224,7 @@
 				A71888871C63C67E00A172B7 /* liferay-server-context.plist in Resources */,
 				A70EBF911C63C3D300556B61 /* Assets.xcassets in Resources */,
 				A71888941C6506F400A172B7 /* Storyboard.storyboard in Resources */,
+				A710BF2C1D8C4B77006A89EE /* LoginView_fsi.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

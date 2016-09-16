@@ -13,7 +13,7 @@
 @interface LoginScreenViewController ()
 
 @property (nonatomic, weak) IBOutlet LoginScreenlet *screenlet;
-@property (nonatomic,weak) NSNumber *number;
+@property (nonatomic, weak) NSString *qrResult;
 
 @end
 
@@ -60,7 +60,62 @@
         vc.delegate = self;
         
         [vc setCompletionWithBlock:^(NSString *resultAsString) {
+            
+            /* Parse the QR code result VCard/Contact and build service call with contact info to Liferay instance
+             
+             BEGIN:VCARD
+             VERSION:2.1
+             N:4 (Liferay Speaker);Test
+             FN:Test 4 (Liferay Speaker)
+             EMAIL:sana.razvi@liferay.com
+             ORG:Liferay
+             TITLE:Manager
+             END:VCARD
+             
+             */
+            
             NSLog(@"Completion with result: %@", resultAsString);
+
+            //Build scanner on QR code string
+            NSScanner *scan = [NSScanner scannerWithString:resultAsString];
+            
+            NSCharacterSet *newLine = [NSCharacterSet characterSetWithCharactersInString:@"\n"];
+            NSCharacterSet *colon = [NSCharacterSet characterSetWithCharactersInString:@":"];
+            
+            //Define parsing tokens. These are the items that will be used to sign up each user
+            NSArray *keyArray = @[@"FN", @"EMAIL", @"ORG", @"TITLE"];
+            NSMutableArray *valueArray = [[NSMutableArray alloc] init];
+           
+            NSString *result;
+            
+            while ([scan scanUpToCharactersFromSet: newLine intoString:&result]) {
+                
+                //if scanned token is FN, EMAIL, ORG, TITLE, parse further for value otherwise keep going
+                
+                NSScanner *secondScan = [NSScanner scannerWithString:result];
+                NSString *secondResult, *value;
+                
+                if ([secondScan scanUpToCharactersFromSet:colon intoString:&secondResult]) {
+                    NSLog(secondResult);
+                    
+                    if ([keyArray containsObject:secondResult]) {
+                        
+                        if ([secondScan scanUpToCharactersFromSet:newLine intoString:&value]){
+                            NSLog(value);
+                            
+                            //Determine which key is the value associated with
+                            [valueArray addObject:value];
+                            
+                        }
+                        
+                    }
+                    
+                }
+                
+                
+                
+            }
+            
         }];
         
         [self presentViewController:vc animated:YES completion:NULL];
@@ -70,6 +125,7 @@
         
         [alert show];
     }
+    
     
     //Create session
     LRSession *session = [[LRSession alloc] initWithServer:@"https://cloud-10-0-20-48.liferay.com/"

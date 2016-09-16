@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '82D9BCCE17AFA7AF52C0C76D'
+               BlueprintIdentifier = '8D09927AEC81A606FFA3EDC9'
                BlueprintName = 'ODRefreshControl'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'ODRefreshControl.framework'>

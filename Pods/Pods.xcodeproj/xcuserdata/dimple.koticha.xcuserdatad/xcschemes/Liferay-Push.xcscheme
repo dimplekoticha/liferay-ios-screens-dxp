@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'BFE8C2B4A3A2409BE174CAE5'
+               BlueprintIdentifier = '214FD51BEF27F7FB29E21BF0'
                BlueprintName = 'Liferay-Push'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'LRPush.framework'>
