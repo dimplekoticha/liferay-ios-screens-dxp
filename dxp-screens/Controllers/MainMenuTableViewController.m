@@ -22,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    
     //Items in slide out menu on Main Screen after Login
     mainMenu = @[@"first", @"second", @"third", @"fourth"];
     

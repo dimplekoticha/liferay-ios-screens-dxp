@@ -39,8 +39,9 @@
     notification.timeZone = [NSTimeZone defaultTimeZone];
     notification.repeatInterval = 0;
     notification.soundName = UILocalNotificationDefaultSoundName;
-    notification.alertAction = @"Let's do this";
-    notification.alertBody = @"Please proceed to table 1.";
+    NSString *title = @"Welcome to DXP Bank";
+    //notification.alertTitle = ([title stringByAppendingString:fullName]);
+    notification.alertBody = (@"Meet with your banker now!");
     
     [[UIApplication sharedApplication]presentLocalNotificationNow:notification];
     

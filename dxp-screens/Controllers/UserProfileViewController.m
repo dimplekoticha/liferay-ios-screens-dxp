@@ -23,6 +23,7 @@
     
     //[SessionContext loginWithBasicWithUsername:@"bruno" password:@"test" userAttributes:[NSDictionary dictionary]];
     [self.screenlet loadLoggedUserPortrait];
+    [self.screenlet setPresentingViewController:self];
 }
 
 //Get other delegate method definitions and add them. XCode isn't opening the UserPortraitScreenletDelegate class for me to grab those methods.

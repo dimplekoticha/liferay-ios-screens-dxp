@@ -76,7 +76,8 @@
             
             if (resultAsString != nil) {
             
-                NSLog(@"Completion with result: %@", resultAsString);
+                NSLog(@"Scanned QR Code: %@", resultAsString);
+                NSLog(@"Starting to parse user data from QR code");
 
                 //Build scanner on QR code string
                 NSScanner *scanresultAsString = [NSScanner scannerWithString:resultAsString];
@@ -91,16 +92,18 @@
                
                 NSString *result;
                 
+                //Start by scanning one line at a time tokenized by /n
                 while ([scanresultAsString scanUpToCharactersFromSet:newLine intoString:&result]) {
                     
                     //if scanned token is FN, EMAIL, ORG, TITLE, parse further for value otherwise keep going
-                    
                     NSScanner *scanSecondary = [NSScanner scannerWithString:result];
                     NSString *secondResult, *value;
                     
+                    //Scan until colon to extract "key"
                     if ([scanSecondary scanUpToCharactersFromSet:colon intoString:&secondResult]) {
                         NSLog(secondResult);
                         
+                        //If the "key" is FN, EMAIL, ORG, TITLE
                         if ([keyArray containsObject:secondResult]) {
                             
                             if ([scanSecondary scanUpToCharactersFromSet:newLine intoString:&value]){
@@ -115,12 +118,32 @@
                     }
         
                 }
-            
+                
+                    
                 //Make service call
+                
+                NSLog(@"Making service call to create user");
                 
                 //Create session
                 LRSession *session = [[LRSession alloc] initWithServer:@"https://cloud-10-0-20-48.liferay.com/"
                                                         authentication:[[LRBasicAuthentication alloc] initWithUsername:@"bruno" password:@"test"]];
+                
+                
+                
+                //Instead of implementing separate call back class, using block to implement callback
+                [session
+                 onSuccess:^(id result) {
+                     
+                     NSLog(@"Callback - Success");
+                    
+                 }
+                 onFailure:^(NSError *e) {
+                     // Implement error handling code
+                     NSLog(@"Session error %@", e );
+                     [self dismissViewControllerAnimated:YES completion:NULL];
+
+                 }
+                 ];
                 
                 LRUserService_v7 *service = [[LRUserService_v7 alloc] initWithSession:session];
                 NSError *error;
@@ -134,46 +157,39 @@
                 NSString *jobTitle = [[valueArray objectAtIndex:3] stringByTrimmingCharactersInSet:colon];
                 NSArray *blankArray = [[NSArray alloc]init];
                 NSString *fullName;
-               
+                
                 NSScanner *scanAttendeeName = [NSScanner scannerWithString:name];
                 if ([scanAttendeeName scanUpToCharactersFromSet:bracket intoString:&fullName]) {
                     
-                    NSLog(fullName);
+                    if (fullName != nil) {
                     
-                    [service addUserWithCompanyId:companyid autoPassword:true password1:@"test" password2:@"test" autoScreenName:true screenName:@"Dimple" emailAddress:email facebookId:0 openId:@"" locale:@"" firstName:fullName middleName:@"" lastName:@"Koticha" prefixId:0 suffixId:0 male:true birthdayMonth:1 birthdayDay:1 birthdayYear:1970 jobTitle:jobTitle groupIds:blankArray organizationIds:blankArray roleIds:blankArray userGroupIds:blankArray addresses:blankArray emailAddresses:blankArray phones:blankArray websites:blankArray announcementsDelivers:blankArray sendEmail:true serviceContext:nil error:&error];
-
+                        [service addUserWithCompanyId:companyid autoPassword:true password1:@"test" password2:@"test" autoScreenName:true screenName:@"Dimple" emailAddress:email facebookId:0 openId:@"" locale:@"" firstName:fullName middleName:@"" lastName:@"Koticha" prefixId:0 suffixId:0 male:true birthdayMonth:1 birthdayDay:1 birthdayYear:1970 jobTitle:jobTitle groupIds:blankArray organizationIds:blankArray roleIds:blankArray userGroupIds:blankArray addresses:blankArray emailAddresses:blankArray phones:blankArray websites:blankArray announcementsDelivers:blankArray sendEmail:true serviceContext:nil error:&error];
+                        
+                        //Send Local Push Notification to direct newly signed up user to appropriate desk
+                        
+                        [[UIApplication sharedApplication] cancelAllLocalNotifications];
+                        UILocalNotification *notification = [[UILocalNotification alloc]init];
+                        
+                        // create a local notification
+                        notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:30];
+                        notification.timeZone = [NSTimeZone defaultTimeZone];
+                        notification.repeatInterval = 0;
+                        notification.soundName = UILocalNotificationDefaultSoundName;
+                        NSString *title = @"Welcome to DXP Bank, ";
+                        notification.alertTitle = ([title stringByAppendingString:fullName]);
+                        notification.alertBody = (@"Meet with your banker now!");
+                        
+                        [[UIApplication sharedApplication]presentLocalNotificationNow:notification];
+                        
+                    }
+                    
+                    NSLog(@"New QR User Registered");
                 }
                 
-                
-                //Send Local Push Notification to direct newly signed up user to appropriate desk
-                
-                [[UIApplication sharedApplication] cancelAllLocalNotifications];
-                UILocalNotification *notification = [[UILocalNotification alloc]init];
-                
-                // create a local notification
-                notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:30];
-                notification.timeZone = [NSTimeZone defaultTimeZone];
-                notification.repeatInterval = 0;
-                notification.soundName = UILocalNotificationDefaultSoundName;
-                notification.alertAction = (@"Welcome %s",fullName);
-                notification.alertBody = (@"Welcome %s! Please proceed to table 1.", fullName);
-                
-                [[UIApplication sharedApplication]presentLocalNotificationNow:notification];
-                
-                
-                NSLog(@"Completed");
             }
-
-            
-            
-        }];
-        
-        [self presentViewController:vc animated:YES completion:NULL];
-    }
-    else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Reader not supported by the current device" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        
-        [alert show];
+    }];
+    
+    [self presentViewController:vc animated:YES completion:NULL];
     }
     
 }
@@ -185,8 +201,7 @@
     [reader stopScanning];
     
     [self dismissViewControllerAnimated:YES completion:^{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"QRCodeReader" message:result delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
+        NSLog(result);
     }];
 }
 

@@ -34,7 +34,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="F5W-Da-QK8" kind="presentation" id="87m-Rr-WMX"/>
+                                    <segue destination="F5W-Da-QK8" kind="presentation" modalTransitionStyle="flipHorizontal" id="87m-Rr-WMX"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Sr-Hz-swD" customClass="LoginScreenlet" customModule="LiferayScreens">
@@ -79,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXk-V5-ddj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3876" y="-2114"/>
+            <point key="canvasLocation" x="-3806" y="-2120"/>
         </scene>
         <!--Sign Up Screen View Controller-->
         <scene sceneID="vhY-8G-GDq">
@@ -93,16 +93,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wdg-Q9-ZwT" customClass="SignUpScreenlet" customModule="LiferayScreens">
-                                <rect key="frame" x="121" y="93" width="382" height="373"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="anonymousApiUserName" value="bruno"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="anonymousApiPassword" value="test"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHL-cN-fPQ">
-                                <rect key="frame" x="170" y="465" width="264" height="44"/>
+                                <rect key="frame" x="121" y="465" width="382" height="44"/>
                                 <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="CANCEL">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -113,7 +105,18 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="0fs-xV-1iC" kind="presentation" modalTransitionStyle="flipHorizontal" id="Fe7-A3-Kaa"/>
+                                </connections>
                             </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wdg-Q9-ZwT" customClass="SignUpScreenlet" customModule="LiferayScreens">
+                                <rect key="frame" x="121" y="93" width="382" height="373"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="anonymousApiUserName" value="bruno"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="anonymousApiPassword" value="test"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -121,6 +124,8 @@
                             <constraint firstItem="wdg-Q9-ZwT" firstAttribute="leading" secondItem="YB0-XU-9Fu" secondAttribute="leadingMargin" constant="40" id="FhR-13-4FW"/>
                             <constraint firstItem="qHL-cN-fPQ" firstAttribute="centerX" secondItem="YB0-XU-9Fu" secondAttribute="centerX" id="glT-7u-tXf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wdg-Q9-ZwT" secondAttribute="trailing" constant="40" id="gx4-A0-Fic"/>
+                            <constraint firstItem="qHL-cN-fPQ" firstAttribute="leading" secondItem="YB0-XU-9Fu" secondAttribute="leadingMargin" constant="40" id="py9-ro-67J"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qHL-cN-fPQ" secondAttribute="trailing" constant="40" id="zil-Kn-rBd"/>
                         </constraints>
                     </view>
                     <connections>
@@ -130,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1GY-mn-poF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3032" y="-2114"/>
+            <point key="canvasLocation" x="-2894" y="-2120"/>
         </scene>
         <!--Home Screen-->
         <scene sceneID="s2a-Nc-Fnt">
@@ -158,18 +163,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="first" textLabel="ZrK-pc-voh" style="IBUITableViewCellStyleDefault" id="mWE-IS-lzx">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="first" textLabel="ZrK-pc-voh" style="IBUITableViewCellStyleDefault" id="mWE-IS-lzx">
                                 <rect key="frame" x="0.0" y="28" width="291" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mWE-IS-lzx" id="uLX-TU-nwo">
                                     <rect key="frame" x="0.0" y="0.0" width="258" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="My Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZrK-pc-voh">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="My Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZrK-pc-voh">
                                             <rect key="frame" x="15" y="0.0" width="241" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -178,18 +183,18 @@
                                     <segue destination="zGP-CY-i2b" kind="custom" customClass="SWRevealViewControllerSegueSetController" id="muL-kD-sEf"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="second" textLabel="Loi-BF-CWX" style="IBUITableViewCellStyleDefault" id="RVC-U4-H6C">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="second" textLabel="Loi-BF-CWX" style="IBUITableViewCellStyleDefault" id="RVC-U4-H6C">
                                 <rect key="frame" x="0.0" y="72" width="291" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RVC-U4-H6C" id="yoa-Vj-4kz">
                                     <rect key="frame" x="0.0" y="0.0" width="258" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Investments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Loi-BF-CWX">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Investments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Loi-BF-CWX">
                                             <rect key="frame" x="15" y="0.0" width="241" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -205,11 +210,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="258" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bBl-Ml-Td5">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Notifications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bBl-Ml-Td5">
                                             <rect key="frame" x="15" y="0.0" width="241" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -225,11 +230,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="258" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Pending Applications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JCK-g5-P9L">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Pending Applications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JCK-g5-P9L">
                                             <rect key="frame" x="15" y="0.0" width="241" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -354,7 +359,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6d8-Ck-Zvj" customClass="WebContentDisplayScreenlet" customModule="LiferayScreens">
-                                <rect key="frame" x="171" y="115" width="259" height="369"/>
+                                <rect key="frame" x="171" y="49" width="259" height="435"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="articleId" value="35616"/>
@@ -363,7 +368,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="6d8-Ck-Zvj" firstAttribute="leading" secondItem="aD3-nO-wnm" secondAttribute="leadingMargin" constant="40" id="CB3-eB-Ufc"/>
                             <constraint firstItem="6d8-Ck-Zvj" firstAttribute="centerY" secondItem="aD3-nO-wnm" secondAttribute="centerY" id="MVR-ov-ur1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6d8-Ck-Zvj" secondAttribute="trailing" constant="40" id="drU-8X-V2n"/>
                             <constraint firstItem="6d8-Ck-Zvj" firstAttribute="centerX" secondItem="aD3-nO-wnm" secondAttribute="centerX" id="rrU-9d-W7y"/>
                         </constraints>
                     </view>

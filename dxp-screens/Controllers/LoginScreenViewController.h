@@ -12,6 +12,7 @@
 
 @interface LoginScreenViewController : UIViewController <LoginScreenletDelegate, QRCodeReaderDelegate>
 
+
 - (IBAction)scanAction:(id)sender;
 
 @end
