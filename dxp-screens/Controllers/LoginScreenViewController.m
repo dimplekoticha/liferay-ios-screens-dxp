@@ -14,6 +14,7 @@
 
 @property (nonatomic, weak) IBOutlet LoginScreenlet *screenlet;
 @property (nonatomic, weak) NSString *qrResult;
+@property (nonatomic, strong) NSString *globalFullName;
 
 @end
 
@@ -135,6 +136,24 @@
                  onSuccess:^(id result) {
                      
                      NSLog(@"Callback - Success");
+                     //Send Local Push Notification to direct newly signed up user to appropriate desk
+                     
+                     [[UIApplication sharedApplication] cancelAllLocalNotifications];
+                     UILocalNotification *notification = [[UILocalNotification alloc]init];
+                     
+                     // create a local notification
+                     notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:30];
+                     notification.timeZone = [NSTimeZone defaultTimeZone];
+                     notification.repeatInterval = 0;
+                     notification.soundName = UILocalNotificationDefaultSoundName;
+                     NSString *title = @"Welcome to DXP Bank, ";
+                     //notification.alertTitle = (@"Welcome to DXP Bank");
+                     notification.alertTitle = ([title stringByAppendingString:_globalFullName]);
+                     notification.alertBody = (@"Meet with your banker now!");
+                     
+                     [[UIApplication sharedApplication]presentLocalNotificationNow:notification];
+                     
+                      NSLog(@"New QR User Registered");
                     
                  }
                  onFailure:^(NSError *e) {
@@ -165,25 +184,9 @@
                     
                         [service addUserWithCompanyId:companyid autoPassword:true password1:@"test" password2:@"test" autoScreenName:true screenName:@"Dimple" emailAddress:email facebookId:0 openId:@"" locale:@"" firstName:fullName middleName:@"" lastName:@"Koticha" prefixId:0 suffixId:0 male:true birthdayMonth:1 birthdayDay:1 birthdayYear:1970 jobTitle:jobTitle groupIds:blankArray organizationIds:blankArray roleIds:blankArray userGroupIds:blankArray addresses:blankArray emailAddresses:blankArray phones:blankArray websites:blankArray announcementsDelivers:blankArray sendEmail:true serviceContext:nil error:&error];
                         
-                        //Send Local Push Notification to direct newly signed up user to appropriate desk
-                        
-                        [[UIApplication sharedApplication] cancelAllLocalNotifications];
-                        UILocalNotification *notification = [[UILocalNotification alloc]init];
-                        
-                        // create a local notification
-                        notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:30];
-                        notification.timeZone = [NSTimeZone defaultTimeZone];
-                        notification.repeatInterval = 0;
-                        notification.soundName = UILocalNotificationDefaultSoundName;
-                        NSString *title = @"Welcome to DXP Bank, ";
-                        notification.alertTitle = ([title stringByAppendingString:fullName]);
-                        notification.alertBody = (@"Meet with your banker now!");
-                        
-                        [[UIApplication sharedApplication]presentLocalNotificationNow:notification];
-                        
+                        self.globalFullName = [[NSString alloc] initWithString:fullName];
                     }
-                    
-                    NSLog(@"New QR User Registered");
+
                 }
                 
             }

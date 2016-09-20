@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="login_logo" translatesAutoresizingMaskIntoConstraints="NO" id="kYP-zh-aZW">
-                                <rect key="frame" x="232" y="33" width="139" height="54"/>
+                                <rect key="frame" x="232" y="33" width="139" height="67"/>
                                 <color key="tintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovv-Lk-9dS">
@@ -38,7 +38,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Sr-Hz-swD" customClass="LoginScreenlet" customModule="LiferayScreens">
-                                <rect key="frame" x="177" y="108" width="246" height="245"/>
+                                <rect key="frame" x="177" y="108" width="248" height="245"/>
                                 <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
@@ -110,7 +110,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wdg-Q9-ZwT" customClass="SignUpScreenlet" customModule="LiferayScreens">
-                                <rect key="frame" x="121" y="93" width="382" height="373"/>
+                                <rect key="frame" x="121" y="91" width="382" height="375"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="anonymousApiUserName" value="bruno"/>
@@ -270,7 +270,7 @@
             </objects>
             <point key="canvasLocation" x="-2251" y="-659"/>
         </scene>
-        <!--Web Content Display View Controller-->
+        <!--My Account-->
         <scene sceneID="1EK-a2-vuI">
             <objects>
                 <viewController id="zGP-CY-i2b" customClass="WebContentDisplayViewController" sceneMemberID="viewController">
@@ -283,7 +283,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pDM-DL-odc" customClass="WebContentDisplayScreenlet" customModule="LiferayScreens">
-                                <rect key="frame" x="163" y="75" width="274" height="450"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="592"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="articleId" value="35583"/>
@@ -294,10 +294,11 @@
                         <constraints>
                             <constraint firstItem="pDM-DL-odc" firstAttribute="centerX" secondItem="4xY-Be-JOp" secondAttribute="centerX" id="3GT-tM-Z8x"/>
                             <constraint firstItem="pDM-DL-odc" firstAttribute="centerY" secondItem="4xY-Be-JOp" secondAttribute="centerY" id="rMU-bw-9OC"/>
+                            <constraint firstItem="pDM-DL-odc" firstAttribute="centerX" secondItem="4xY-Be-JOp" secondAttribute="centerX" id="ztI-HS-OGK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Rzn-uQ-ay1">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="mPF-ok-o68"/>
+                    <navigationItem key="navigationItem" title="My Account" prompt="DXP Bank" id="Rzn-uQ-ay1">
+                        <barButtonItem key="leftBarButtonItem" image="Toggle icon" id="mPF-ok-o68"/>
                     </navigationItem>
                     <connections>
                         <outlet property="barButton" destination="mPF-ok-o68" id="44b-MB-4kW"/>
@@ -308,7 +309,7 @@
             </objects>
             <point key="canvasLocation" x="-692" y="-1159"/>
         </scene>
-        <!--Web Content Display View Controller-->
+        <!--Investments-->
         <scene sceneID="mdv-oR-uf2">
             <objects>
                 <viewController id="v0F-6w-Xen" customClass="WebContentDisplayViewController" sceneMemberID="viewController">
@@ -321,7 +322,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AXe-wK-NKq" customClass="WebContentDisplayScreenlet" customModule="LiferayScreens">
-                                <rect key="frame" x="152" y="35" width="297" height="530"/>
+                                <rect key="frame" x="5" y="0.0" width="563" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="articleId" value="35594"/>
@@ -334,8 +335,8 @@
                             <constraint firstItem="AXe-wK-NKq" firstAttribute="centerX" secondItem="HHW-Xg-wqo" secondAttribute="centerX" id="FXt-Ia-i9V"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cMJ-VV-HhP">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="gQ5-Yo-rYN"/>
+                    <navigationItem key="navigationItem" title="Investments" prompt="DXP Bank" id="cMJ-VV-HhP">
+                        <barButtonItem key="leftBarButtonItem" image="Toggle icon" id="gQ5-Yo-rYN"/>
                     </navigationItem>
                     <connections>
                         <outlet property="barButton" destination="gQ5-Yo-rYN" id="bYf-2Y-ePI"/>
@@ -346,7 +347,7 @@
             </objects>
             <point key="canvasLocation" x="-692" y="-3217"/>
         </scene>
-        <!--Web Content Display View Controller-->
+        <!--Notification-->
         <scene sceneID="6jU-PI-fU5">
             <objects>
                 <viewController id="2wq-Vz-roy" customClass="WebContentDisplayViewController" sceneMemberID="viewController">
@@ -359,7 +360,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6d8-Ck-Zvj" customClass="WebContentDisplayScreenlet" customModule="LiferayScreens">
-                                <rect key="frame" x="171" y="49" width="259" height="435"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="articleId" value="35616"/>
@@ -368,14 +369,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6d8-Ck-Zvj" firstAttribute="leading" secondItem="aD3-nO-wnm" secondAttribute="leadingMargin" constant="40" id="CB3-eB-Ufc"/>
                             <constraint firstItem="6d8-Ck-Zvj" firstAttribute="centerY" secondItem="aD3-nO-wnm" secondAttribute="centerY" id="MVR-ov-ur1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="6d8-Ck-Zvj" secondAttribute="trailing" constant="40" id="drU-8X-V2n"/>
                             <constraint firstItem="6d8-Ck-Zvj" firstAttribute="centerX" secondItem="aD3-nO-wnm" secondAttribute="centerX" id="rrU-9d-W7y"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="W5f-6M-P2l">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="K2A-T9-snu"/>
+                    <navigationItem key="navigationItem" title="Notification" prompt="DXP Bank" id="W5f-6M-P2l">
+                        <barButtonItem key="leftBarButtonItem" image="Toggle icon" id="K2A-T9-snu"/>
                     </navigationItem>
                     <connections>
                         <outlet property="barButton" destination="K2A-T9-snu" id="oYV-aI-HI5"/>
@@ -426,7 +425,7 @@
             </objects>
             <point key="canvasLocation" x="-2251" y="-1464"/>
         </scene>
-        <!--Forms View Controller-->
+        <!--Pending Application-->
         <scene sceneID="ATI-nf-7Oh">
             <objects>
                 <viewController id="m51-eD-rBG" customClass="DDLFormsViewController" sceneMemberID="viewController">
@@ -439,7 +438,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K5P-xB-BJK" customClass="DDLFormScreenlet" customModule="LiferayScreens">
-                                <rect key="frame" x="131" y="48" width="339" height="503"/>
+                                <rect key="frame" x="127" y="29" width="347" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="structureId">
@@ -454,12 +453,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="K5P-xB-BJK" firstAttribute="centerY" secondItem="sbt-Lk-cWR" secondAttribute="centerY" id="pfF-W3-f05"/>
                             <constraint firstItem="K5P-xB-BJK" firstAttribute="centerX" secondItem="sbt-Lk-cWR" secondAttribute="centerX" id="rC5-SJ-Gas"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="UoS-hA-rrg">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="qEC-tD-WRz"/>
+                    <navigationItem key="navigationItem" title="Pending Application" prompt="DXP Bank" id="UoS-hA-rrg">
+                        <barButtonItem key="leftBarButtonItem" image="Toggle icon" id="qEC-tD-WRz"/>
                     </navigationItem>
                     <connections>
                         <outlet property="barButton" destination="qEC-tD-WRz" id="ACK-os-7jK"/>
@@ -472,11 +470,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Toggle icon" width="20" height="20"/>
         <image name="login_logo" width="80" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pvC-Ra-uoH"/>
         <segue reference="muL-kD-sEf"/>
+        <segue reference="pvC-Ra-uoH"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
 </document>
