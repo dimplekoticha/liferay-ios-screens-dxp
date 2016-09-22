@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B5E51471D94072D0043C74F /* UserPortraitView_dxp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E51451D94072D0043C74F /* UserPortraitView_dxp.swift */; };
+		0B5E51481D94072D0043C74F /* UserPortraitView_dxp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B5E51461D94072D0043C74F /* UserPortraitView_dxp.xib */; };
 		5E75A29F4EB12BADB0189908 /* Pods_dxp_screens.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4335AE4ECFEC7BDE199CE5A5 /* Pods_dxp_screens.framework */; };
 		A70EBF831C63C3D300556B61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A70EBF821C63C3D300556B61 /* main.m */; };
 		A70EBF861C63C3D300556B61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A70EBF851C63C3D300556B61 /* AppDelegate.m */; };
@@ -22,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B5E51441D94072B0043C74F /* dxp-screens-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dxp-screens-Bridging-Header.h"; sourceTree = "<group>"; };
+		0B5E51451D94072D0043C74F /* UserPortraitView_dxp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPortraitView_dxp.swift; sourceTree = "<group>"; };
+		0B5E51461D94072D0043C74F /* UserPortraitView_dxp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserPortraitView_dxp.xib; sourceTree = "<group>"; };
 		4335AE4ECFEC7BDE199CE5A5 /* Pods_dxp_screens.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dxp_screens.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56327AAEDECEEDB1A500A4EE /* Pods-dxp-screens.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dxp-screens.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dxp-screens/Pods-dxp-screens.debug.xcconfig"; sourceTree = "<group>"; };
 		A70EBF7E1C63C3D300556B61 /* dxp-screens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dxp-screens.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +64,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B5E51491D9407340043C74F /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				0B5E51441D94072B0043C74F /* dxp-screens-Bridging-Header.h */,
+				0B5E51451D94072D0043C74F /* UserPortraitView_dxp.swift */,
+				0B5E51461D94072D0043C74F /* UserPortraitView_dxp.xib */,
+			);
+			name = Theme;
+			sourceTree = "<group>";
+		};
 		5EDFD253008618034B04CAE7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +112,7 @@
 		A70EBF801C63C3D300556B61 /* dxp-screens */ = {
 			isa = PBXGroup;
 			children = (
+				0B5E51491D9407340043C74F /* Theme */,
 				A71888931C6506F400A172B7 /* Storyboard.storyboard */,
 				A71888891C643F0C00A172B7 /* Controllers */,
 				A71888881C643F0200A172B7 /* Views */,
@@ -173,6 +189,7 @@
 		A70EBF761C63C3D300556B61 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Liferay;
 				TargetAttributes = {
@@ -213,6 +230,7 @@
 				A71888871C63C67E00A172B7 /* liferay-server-context.plist in Resources */,
 				A70EBF911C63C3D300556B61 /* Assets.xcassets in Resources */,
 				A71888941C6506F400A172B7 /* Storyboard.storyboard in Resources */,
+				0B5E51481D94072D0043C74F /* UserPortraitView_dxp.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +293,7 @@
 				A70EBF861C63C3D300556B61 /* AppDelegate.m in Sources */,
 				A71888BD1C654A6200A172B7 /* WebContentDisplayViewController.m in Sources */,
 				A771BB431D662A50007DC0F5 /* MainMenuTableViewController.m in Sources */,
+				0B5E51471D94072D0043C74F /* UserPortraitView_dxp.swift in Sources */,
 				A70EBF831C63C3D300556B61 /* main.m in Sources */,
 				A7A0B9C91D81E6490080D142 /* DDLFormsViewController.m in Sources */,
 				A718888E1C64410E00A172B7 /* LoginScreenViewController.m in Sources */,
@@ -370,6 +389,7 @@
 			baseConfigurationReference = 56327AAEDECEEDB1A500A4EE /* Pods-dxp-screens.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "dxp-screens/Info.plist";
@@ -378,6 +398,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.liferay.dxp.fsi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "dxp-screens/dxp-screens-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -387,6 +409,7 @@
 			baseConfigurationReference = A8CCC632704C6088688409ED /* Pods-dxp-screens.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "dxp-screens/Info.plist";
@@ -395,6 +418,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.liferay.dxp.fsi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "dxp-screens/dxp-screens-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
