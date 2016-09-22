@@ -136,6 +136,8 @@
                  onSuccess:^(id result) {
                      
                      NSLog(@"Callback - Success");
+                     
+                     
                      //Send Local Push Notification to direct newly signed up user to appropriate desk
                      
                      [[UIApplication sharedApplication] cancelAllLocalNotifications];
@@ -164,11 +166,8 @@
                  }
                  ];
                 
-                LRUserService_v7 *service = [[LRUserService_v7 alloc] initWithSession:session];
-                NSError *error;
-                
+
                 long long companyid = 20116;
-                long long facebookId = 0;
                 
                 //Trim off colon at the first position of the string
                 NSString *name = [[valueArray objectAtIndex:0] stringByTrimmingCharactersInSet:colon];
@@ -181,7 +180,18 @@
                 if ([scanAttendeeName scanUpToCharactersFromSet:bracket intoString:&fullName]) {
                     
                     if (fullName != nil) {
-                    
+                        
+                        //Update Category with new user for it to be read by portlet on the server side. even if the call to register the user fails
+                        //We still want the server side portlet scanning for user name to be updated to give the effect that it's welcoming a returning user.
+                        
+                        LRAssetCategoryPropertyService_v7 *assetCategoryService = [[LRAssetCategoryPropertyService_v7 alloc] initWithSession:session];
+                        NSError *error;
+                        
+                        //Using hardcoded categorypropertyid for now. It would be alot more work to call to retrieve and then parse it out
+                        [assetCategoryService updateCategoryPropertyWithCategoryPropertyId:57612 key:@"lastregistereduser" value:fullName error:&error];
+
+                        LRUserService_v7 *service = [[LRUserService_v7 alloc] initWithSession:session];
+                        
                         [service addUserWithCompanyId:companyid autoPassword:true password1:@"test" password2:@"test" autoScreenName:true screenName:@"Dimple" emailAddress:email facebookId:0 openId:@"" locale:@"" firstName:fullName middleName:@"" lastName:@"Koticha" prefixId:0 suffixId:0 male:true birthdayMonth:1 birthdayDay:1 birthdayYear:1970 jobTitle:jobTitle groupIds:blankArray organizationIds:blankArray roleIds:blankArray userGroupIds:blankArray addresses:blankArray emailAddresses:blankArray phones:blankArray websites:blankArray announcementsDelivers:blankArray sendEmail:true serviceContext:nil error:&error];
                         
                         self.globalFullName = [[NSString alloc] initWithString:fullName];
